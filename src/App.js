@@ -6,7 +6,7 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            flagSelected: 'usa',
+            flagSelected: 'brazil',
             nCrow: 279,
             nFire: 39,
             nGems: 531,

@@ -1,6 +1,9 @@
 import React from 'react';
 import CountItem from "./CountItem";
 import FlagButton from "./FlagButton";
+import crow from '../assets/icons/crown.svg';
+import fire from '../assets/icons/fire.svg';
+import gem from '../assets/icons/gem.svg';
 
 export default class TopBar extends React.Component {
     constructor(props) {
@@ -10,8 +13,8 @@ export default class TopBar extends React.Component {
     render = () => {
         const TopBarStyle = {
             height: '40px',
-            boxShadow: '0px 0px 2px 0px #aaaaaa66',
-            borderBottom: '2px solid #aaaaaa66',
+            boxShadow: '0px 0px 2px 0px #afafaf',
+            borderBottom: '2px solid #afafaf',
             padding: '5px 20px',
             display: 'flex',
             justifyContent: 'space-between',
@@ -20,10 +23,10 @@ export default class TopBar extends React.Component {
 
         return (
             <header style={TopBarStyle}>
-                <FlagButton imageUrl={this.props.flagSelected} />
-                <CountItem count={this.props.nCrow} color="orange" />
-                <CountItem count={this.props.nFire} color="orangered" />
-                <CountItem count={this.props.nGems} color="tomato" />
+                <FlagButton image={this.props.flagSelected} />
+                <CountItem count={this.props.nCrow} color="#ffc800" img={crow} />
+                <CountItem count={this.props.nFire} color="#ff9600" img={fire}/>
+                <CountItem count={this.props.nGems} color="#fc4848" img={gem}/>
             </header>
         );
     }
