@@ -50,7 +50,7 @@ const FlagButton = (props) => {
     };
 
     return (
-        <button style={buttonStyle} onClick={props.onClick}>
+        <button style={buttonStyle} onClick={props.onClick} name={props.image}>
         </button>
     );
 };

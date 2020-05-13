@@ -3,3 +3,20 @@ html body {
     padding: 0;
     font: 500 17px/20px sans-serif;
 }
+
+.rowFlags button {
+    margin: 0px 10px;
+}
+
+.selectFlag::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    background-color: white;
+    transform: rotate(45deg);
+    margin-top: -32.5px;
+    border-top: 2px solid #cccccc;
+    border-left: 2px solid #cccccc;
+    margin-left: 23px;
+}

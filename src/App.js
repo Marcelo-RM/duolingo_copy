@@ -14,10 +14,19 @@ export default class App extends React.Component {
         };
     };
 
+    changeFlag = (event) => {
+        let newFlag = event.target.name;
+        if(!newFlag) return;
+
+        this.setState({
+            flagSelected: newFlag.toString()
+        });
+    };
+
     render = () => {
         return (
             <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
-                nFire={this.state.nFire} nGems={this.state.nGems} />
+                nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}/>
         );
     };
 };

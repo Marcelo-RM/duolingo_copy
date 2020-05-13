@@ -4,6 +4,7 @@ import FlagButton from "./FlagButton";
 import crow from '../assets/icons/crown.svg';
 import fire from '../assets/icons/fire.svg';
 import gem from '../assets/icons/gem.svg';
+import SelectFlag from './SelectFlag';
 
 export default class TopBar extends React.Component {
     constructor(props) {
@@ -23,6 +24,8 @@ export default class TopBar extends React.Component {
 
         return (
             <header style={TopBarStyle}>
+                <SelectFlag changeFlag={this.props.changeFlag}/>
+
                 <FlagButton image={this.props.flagSelected} />
                 <CountItem count={this.props.nCrow} color="#ffc800" img={crow} />
                 <CountItem count={this.props.nFire} color="#ff9600" img={fire}/>
