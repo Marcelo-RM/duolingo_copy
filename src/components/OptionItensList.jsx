@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import OptionItem from './OptionItem';
 
 class OptionItensList extends Component {
+
+    isSelected = (nome) => {
+        return this.props.optionSelected === nome;
+    }
     render() {
         const optionItensStyle = {
             display: 'flex',
@@ -9,11 +13,11 @@ class OptionItensList extends Component {
         }
         return (
             <div style={optionItensStyle}>
-                <OptionItem selected={true} image="learn.svg" />
-                <OptionItem selected={false} image="stories.svg" />
-                <OptionItem selected={false} image="discuss.svg" />
-                <OptionItem selected={false} image="profile.svg" />
-                <OptionItem selected={false} image="store.svg" />
+                <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('learn')} name="learn" image="learn.svg" />
+                <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('stories')} name="stories" image="stories.svg" />
+                <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('discuss')} name="discuss" image="discuss.svg" />
+                <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('profile')} name="profile" image="profile.svg" />
+                <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('store')} name="store" image="store.svg" />
             </div>
         );
     }

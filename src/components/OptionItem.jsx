@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class OptionItem extends Component {
+const OptionItem = (props) => {
 
-    formatImageName = () => {
-        return this.props.image.split('.svg')[0] + "-selected.svg";
+    const formatImageName = () => {
+        return props.image.split('.svg')[0] + "-selected.svg";
     }
 
-    render() {
-        const images = require.context('../assets/icons/', true);
-        const imageName = this.props.selected ? this.formatImageName() : this.props.image;
+    const images = require.context('../assets/icons/', true);
+    const imageName = props.selected ? formatImageName() : props.image;
 
-        const optionItemStyle = {
-            width: '50px',
-            height: '50px',
-            backgroundImage: 'url(' + images('./' + imageName) + ')',
-            backgroundColor: 'transparent',
-            border: 'none',
-            borderRadius: '5px',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            outline: 'none',
-        };
+    const optionItemStyle = {
+        width: '50px',
+        height: '50px',
+        backgroundImage: 'url(' + images('./' + imageName) + ')',
+        backgroundColor: 'transparent',
+        border: 'none',
+        borderRadius: '5px',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        outline: 'none',
+    };
 
-        return (
-            <button style={optionItemStyle}>
-                
-            </button>
-        );
-    }
+    return (
+        <button style={optionItemStyle} onClick={props.optionClick} name={props.name} >
+
+        </button>
+    );
 }
 
 export default OptionItem;

@@ -15,7 +15,7 @@ class FooterBar extends Component {
 
         return (
             <footer style={footerStyle}>
-                <OptionItensList />
+                <OptionItensList optionSelected={this.props.optionSelected} optionClick={this.props.optionClick}/>
             </footer>
         );
     }

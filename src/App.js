@@ -15,6 +15,7 @@ export default class App extends React.Component {
             nGems: 531,
             catSelected: 'training',
             showChangeFlag: false,
+            optionSelected: 'learn',
         };
     };
 
@@ -34,6 +35,15 @@ export default class App extends React.Component {
         });
     };
 
+    changeOption = (event) => {
+        let newOption = event.target.name;
+        if(!newOption) return;
+
+        this.setState({
+            optionSelected: newOption,
+        });
+    };
+
     render = () => {
         //Se estiver abrindo no computador exibir mensagem de suporte
         if (!getSO().isMobile) {
@@ -49,7 +59,7 @@ export default class App extends React.Component {
                     nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
                     showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
 
-                <FooterBar />
+                <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption}/>
             </Screen>
         );
     };
