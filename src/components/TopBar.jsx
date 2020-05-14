@@ -7,10 +7,7 @@ import gem from '../assets/icons/gem.svg';
 import SelectFlag from './SelectFlag';
 
 export default class TopBar extends React.Component {
-    constructor(props) {
-        super(props);
-    };
-
+    
     render = () => {
         const TopBarStyle = {
             height: '40px',
