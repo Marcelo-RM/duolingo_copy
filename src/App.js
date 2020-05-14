@@ -1,11 +1,13 @@
 import React from 'react';
 import TopBar from './components/TopBar';
 import getSO from './models/device';
+import FooterBar from './components/FooterBar';
+import Screen from './components/Screen';
 
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             flagSelected: 'brazil',
             nCrow: 279,
@@ -24,7 +26,7 @@ export default class App extends React.Component {
 
     changeFlag = (event) => {
         let newFlag = event.target.name;
-        if(!newFlag) return;
+        if (!newFlag) return;
 
         this.setState({
             flagSelected: newFlag.toString(),
@@ -34,17 +36,21 @@ export default class App extends React.Component {
 
     render = () => {
         //Se estiver abrindo no computador exibir mensagem de suporte
-        if(!getSO().isMobile) {
+        if (!getSO().isMobile) {
             return (
                 <h3>A Versão para computador está em desenvolvimento, se deseja visualizar o app altere para
-                    vizualação em celular e atualize a página
+                vizualação em celular e atualize a página
                 </h3>
             )
         }
         return (
-            <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
-                nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
-                showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag}/>
+            <Screen>
+                <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
+                    nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
+                    showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
+
+                <FooterBar />
+            </Screen>
         );
     };
 };
