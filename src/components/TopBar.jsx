@@ -24,12 +24,14 @@ export default class TopBar extends React.Component {
 
         return (
             <header style={TopBarStyle}>
-                <SelectFlag changeFlag={this.props.changeFlag}/>
+                {this.props.showChangeFlag &&
+                    <SelectFlag changeFlag={this.props.changeFlag} />
+                }
 
-                <FlagButton image={this.props.flagSelected} />
+                <FlagButton image={this.props.flagSelected} onClick={this.props.openChangeFlag} />
                 <CountItem count={this.props.nCrow} color="#ffc800" img={crow} />
-                <CountItem count={this.props.nFire} color="#ff9600" img={fire}/>
-                <CountItem count={this.props.nGems} color="#fc4848" img={gem}/>
+                <CountItem count={this.props.nFire} color="#ff9600" img={fire} />
+                <CountItem count={this.props.nGems} color="#fc4848" img={gem} />
             </header>
         );
     }
