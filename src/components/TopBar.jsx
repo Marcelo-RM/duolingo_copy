@@ -19,6 +19,7 @@ export default class TopBar extends React.Component {
             alignItems: 'center',
             position: 'sticky',
             top: '0',
+            backgroundColor: 'white',
         };
 
         return (
