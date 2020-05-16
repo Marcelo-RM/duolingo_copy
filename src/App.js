@@ -4,6 +4,7 @@ import getSO from './models/device';
 import FooterBar from './components/FooterBar';
 import Screen from './components/Screen';
 import LoadingScreen from './views/LoadingScreen';
+import CenterScreen from './components/CenterScreen';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -38,7 +39,7 @@ export default class App extends React.Component {
 
     changeOption = (event) => {
         let newOption = event.target.name;
-        if(!newOption) return;
+        if (!newOption) return;
 
         this.setState({
             optionSelected: newOption,
@@ -60,9 +61,11 @@ export default class App extends React.Component {
                     nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
                     showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
 
-                <LoadingScreen />
+                <CenterScreen>
+                    <LoadingScreen />
+                </CenterScreen>
 
-                <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption}/>
+                <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption} />
             </Screen>
         );
     };

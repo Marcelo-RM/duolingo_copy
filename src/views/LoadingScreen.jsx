@@ -5,18 +5,6 @@ class LoadingScreen extends Component {
 
     render() {
 
-        const loadingScreenStyle = {
-            display: 'flex',
-            width: '100%',
-            heigth: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'white',
-            padding: '20px 0',
-            height: 'calc(100vh - 114px)',
-            boxSizing: 'border-box',
-        };
-
         const childStyle = {
             width: '300px',
             height: 'calc(100vh - 114px)',
@@ -24,6 +12,7 @@ class LoadingScreen extends Component {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            margin: 'auto',
         }
 
         const messageStyle = {
@@ -31,16 +20,15 @@ class LoadingScreen extends Component {
             color: '#aaa',
             overflowWrap: 'break-word',
             marginTop: '20px',
+            textAlign: 'center',
         };
 
         return (
-            <div style={loadingScreenStyle}>
-                <div style={childStyle}>
-                    <img alt="loading" src={duoTraveling} />
-                    <span style={messageStyle}>
-                        Carregando, por favor aguarde!
-                    </span>
-                </div>
+            <div style={childStyle}>
+                <img alt="loading" src={duoTraveling} />
+                <span style={messageStyle}>
+                    Carregando, por favor aguarde!
+                </span>
             </div>
         );
     }
