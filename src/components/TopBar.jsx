@@ -17,6 +17,8 @@ export default class TopBar extends React.Component {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
+            position: 'sticky',
+            top: '0',
         };
 
         return (

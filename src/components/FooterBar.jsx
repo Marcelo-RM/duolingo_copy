@@ -11,6 +11,7 @@ class FooterBar extends Component {
             width: '100vw',
             borderTop: '2px solid #afafaf',
             boxShadow: '0px 0px 2px 0px #afafaf',
+            backgroundColor: 'white',
         };
 
         return (

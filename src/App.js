@@ -3,6 +3,7 @@ import TopBar from './components/TopBar';
 import getSO from './models/device';
 import FooterBar from './components/FooterBar';
 import Screen from './components/Screen';
+import LoadingScreen from './views/LoadingScreen';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -58,6 +59,8 @@ export default class App extends React.Component {
                 <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
                     nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
                     showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
+
+                <LoadingScreen />
 
                 <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption}/>
             </Screen>

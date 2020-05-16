@@ -13,6 +13,7 @@ const SelectFlag = (props) => {
         boxSizing: 'border-box',
         padding: '20px 10px',
         borderRadius: '5px',
+        backgroundColor: 'white',
     };
 
     const rowFlagsStyle = {
