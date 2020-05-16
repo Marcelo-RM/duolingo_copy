@@ -5,6 +5,7 @@ import FooterBar from './components/FooterBar';
 import Screen from './components/Screen';
 import LoadingScreen from './views/LoadingScreen';
 import CenterScreen from './components/CenterScreen';
+import ErrorScreen from './views/ErrorScreen';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -50,9 +51,8 @@ export default class App extends React.Component {
         //Se estiver abrindo no computador exibir mensagem de suporte
         if (!getSO().isMobile) {
             return (
-                <h3>A Versão para computador está em desenvolvimento, se deseja visualizar o app altere para
-                vizualação em celular e atualize a página
-                </h3>
+                <ErrorScreen title="Error" text="A Versão para computador está em desenvolvimento, se deseja visualizar o app altere para
+                visualização em celular e atualize a página!" />
             )
         }
         return (
