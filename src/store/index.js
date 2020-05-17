@@ -1,13 +1,30 @@
 import { createStore } from 'redux';
 
-function reducer () {
-    return {
-        flagSelected: 'china',
-        nCrow: 100,
-        nFire: 50,
-        nGems: 600,
-        showChangeFlag: false,
-        optionSelected: 'profile',
+const INITIAL_STATE = {
+    flagSelected: 'usa',
+    nCrow: 100,
+    nFire: 50,
+    nGems: 600,
+    showChangeFlag: false,
+    optionSelected: 'stories',
+};
+
+function reducer(state = INITIAL_STATE, action) {
+    
+    switch (action.type) {
+        case "SELECT_FLAG":
+            return {
+                ...state,
+                flagSelected: action.flagSelected,
+                showChangeFlag: action.showChangeFlag,
+            };
+        case "TOGGLE_SELECT_FLAG":
+            return {
+                ...state,
+                showChangeFlag: action.showChangeFlag,
+            }
+        default:
+            return state;
     };
 }
 
