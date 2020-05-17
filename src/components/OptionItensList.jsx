@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import OptionItem from './OptionItem';
+import { connect } from 'react-redux';
 
 class OptionItensList extends Component {
 
     isSelected = (nome) => {
         return this.props.optionSelected === nome;
-    }
+    };
+    
     render() {
         const optionItensStyle = {
             display: 'flex',
             justifyContent: 'space-around',
-        }
+        };
         return (
             <div style={optionItensStyle}>
                 <OptionItem optionClick={this.props.optionClick} selected={this.isSelected('learn')} name="learn" image="learn.svg" />
@@ -23,4 +25,11 @@ class OptionItensList extends Component {
     }
 }
 
-export default OptionItensList;
+function mapStateToProps(state, ownProps) {
+    return {
+        optionSelected: state.optionSelected,
+        props: ownProps,
+    };
+}
+
+export default connect(mapStateToProps)(OptionItensList);

@@ -6,9 +6,8 @@ function reducer () {
         nCrow: 100,
         nFire: 50,
         nGems: 600,
-        catSelected: 'training',
         showChangeFlag: false,
-        optionSelected: 'learn',
+        optionSelected: 'profile',
     };
 }
 

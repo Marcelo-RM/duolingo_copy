@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import CountItem from "./CountItem";
 import FlagButton from "./FlagButton";
 import crow from '../assets/icons/crown.svg';
 import fire from '../assets/icons/fire.svg';
 import gem from '../assets/icons/gem.svg';
 import SelectFlag from './SelectFlag';
+import { connect } from 'react-redux';
 
-export default class TopBar extends React.Component {
-    
-    render = () => {
+class TopBar extends Component {
+    render() {
         const TopBarStyle = {
             height: '40px',
             boxShadow: '0px 0px 2px 0px #afafaf',
@@ -28,7 +28,7 @@ export default class TopBar extends React.Component {
                     <SelectFlag changeFlag={this.props.changeFlag} />
                 }
 
-                <FlagButton image={this.props.flagSelected} onClick={this.props.openChangeFlag} />
+                <FlagButton image={this.props.flag} onClick={this.props.openChangeFlag} />
                 <CountItem name="nCrow" color="#ffc800" img={crow} />
                 <CountItem name="nFire" color="#ff9600" img={fire} />
                 <CountItem name="nGems" color="#fc4848" img={gem} />
@@ -36,3 +36,11 @@ export default class TopBar extends React.Component {
         );
     }
 }
+function mapStateToProps(state, ownProps) {
+    return {
+        flag: state.flagSelected,
+        showChangeFlag: state.showChangeFlag,
+        props: ownProps,
+    };
+}
+export default connect(mapStateToProps)(TopBar);

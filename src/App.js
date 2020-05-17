@@ -18,7 +18,6 @@ export default class App extends React.Component {
             nCrow: 279,
             nFire: 39,
             nGems: 531,
-            catSelected: 'training',
             showChangeFlag: false,
             optionSelected: 'learn',
         };
@@ -60,9 +59,7 @@ export default class App extends React.Component {
         return (
             <Provider store={store}>
                 <Screen>
-                    <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
-                        nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
-                        showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
+                    <TopBar changeFlag={this.changeFlag} openChangeFlag={this.showChangeFlag} />
 
                     <CenterScreen>
                         <LoadingScreen />
