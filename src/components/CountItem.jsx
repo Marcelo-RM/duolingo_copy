@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const CountItem = (props) => {
+const CountItem = ({ count, props }) => {
 
     const color = props.color;
 
@@ -18,9 +19,9 @@ const CountItem = (props) => {
     return (
         <div style={countItemStyle}>
             <img width='30px' height='30px' src={props.img} alt="count" />
-            <span style={textStyle}>{props.count}</span>
+            <span style={textStyle}>{count}</span>
         </div>
     );
 };
 
-export default CountItem;
+export default connect((state, ownProps) => ({ count: state[ownProps.name], props: ownProps }))(CountItem);

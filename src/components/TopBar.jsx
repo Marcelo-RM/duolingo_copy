@@ -29,9 +29,9 @@ export default class TopBar extends React.Component {
                 }
 
                 <FlagButton image={this.props.flagSelected} onClick={this.props.openChangeFlag} />
-                <CountItem count={this.props.nCrow} color="#ffc800" img={crow} />
-                <CountItem count={this.props.nFire} color="#ff9600" img={fire} />
-                <CountItem count={this.props.nGems} color="#fc4848" img={gem} />
+                <CountItem name="nCrow" color="#ffc800" img={crow} />
+                <CountItem name="nFire" color="#ff9600" img={fire} />
+                <CountItem name="nGems" color="#fc4848" img={gem} />
             </header>
         );
     }

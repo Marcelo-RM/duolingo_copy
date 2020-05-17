@@ -6,6 +6,8 @@ import Screen from './components/Screen';
 import LoadingScreen from './views/LoadingScreen';
 import CenterScreen from './components/CenterScreen';
 import ErrorScreen from './views/ErrorScreen';
+import { Provider } from 'react-redux';
+import store from './store';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -56,17 +58,19 @@ export default class App extends React.Component {
             )
         }
         return (
-            <Screen>
-                <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
-                    nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
-                    showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
+            <Provider store={store}>
+                <Screen>
+                    <TopBar flagSelected={this.state.flagSelected} nCrow={this.state.nCrow}
+                        nFire={this.state.nFire} nGems={this.state.nGems} changeFlag={this.changeFlag}
+                        showChangeFlag={this.state.showChangeFlag} openChangeFlag={this.showChangeFlag} />
 
-                <CenterScreen>
-                    <LoadingScreen />
-                </CenterScreen>
+                    <CenterScreen>
+                        <LoadingScreen />
+                    </CenterScreen>
 
-                <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption} />
-            </Screen>
+                    <FooterBar optionSelected={this.state.optionSelected} optionClick={this.changeOption} />
+                </Screen>
+            </Provider>
         );
     };
 };
