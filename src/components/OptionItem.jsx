@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { selectOption } from '../store/actions';
 
 const OptionItem = (props) => {
 
@@ -22,10 +24,19 @@ const OptionItem = (props) => {
     };
 
     return (
-        <button style={optionItemStyle} onClick={props.optionClick} name={props.name} >
+        <button style={optionItemStyle} onClick={props.selectOption} name={props.name} >
 
         </button>
     );
 }
 
-export default OptionItem;
+
+function mapDispatchToProps(dispatch) {
+    return {
+        selectOption: event => {
+            dispatch(selectOption(event.target.name));
+        },
+    };
+}
+
+export default connect(null, mapDispatchToProps)(OptionItem);

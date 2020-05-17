@@ -6,7 +6,7 @@ const INITIAL_STATE = {
     nFire: 50,
     nGems: 600,
     showChangeFlag: false,
-    optionSelected: 'stories',
+    optionSelected: 'learn',
 };
 
 function reducer(state = INITIAL_STATE, action) {
@@ -22,7 +22,12 @@ function reducer(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 showChangeFlag: action.showChangeFlag,
-            }
+            };
+        case "SELECT_OPTION":
+            return {
+                ...state,
+                optionSelected: action.optionSelected,
+            }; 
         default:
             return state;
     };

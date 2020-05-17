@@ -12,3 +12,10 @@ export const toggleFlag = (showChangeFlag) => {
         showChangeFlag,
     }
 };
+
+export const selectOption = (optionSelected) => {
+    return {
+        type: "SELECT_OPTION",
+        optionSelected: optionSelected,
+    }
+}
