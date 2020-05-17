@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/duolingo_copy/static/css/main.aecc4508.chunk.css",
+    "main.js": "/duolingo_copy/static/js/main.5b2e7dd1.chunk.js",
+    "main.js.map": "/duolingo_copy/static/js/main.5b2e7dd1.chunk.js.map",
+    "runtime-main.js": "/duolingo_copy/static/js/runtime-main.6d9b5b4e.js",
+    "runtime-main.js.map": "/duolingo_copy/static/js/runtime-main.6d9b5b4e.js.map",
+    "static/js/2.ecc8880a.chunk.js": "/duolingo_copy/static/js/2.ecc8880a.chunk.js",
+    "static/js/2.ecc8880a.chunk.js.map": "/duolingo_copy/static/js/2.ecc8880a.chunk.js.map",
+    "index.html": "/duolingo_copy/index.html",
+    "precache-manifest.43c9d43159cacdf5fa4be14caed4236e.js": "/duolingo_copy/precache-manifest.43c9d43159cacdf5fa4be14caed4236e.js",
+    "service-worker.js": "/duolingo_copy/service-worker.js",
+    "static/css/main.aecc4508.chunk.css.map": "/duolingo_copy/static/css/main.aecc4508.chunk.css.map",
+    "static/js/2.ecc8880a.chunk.js.LICENSE.txt": "/duolingo_copy/static/js/2.ecc8880a.chunk.js.LICENSE.txt",
+    "static/media/add-course.svg": "/duolingo_copy/static/media/add-course.7ba2c9ee.svg",
+    "static/media/crown.svg": "/duolingo_copy/static/media/crown.d078166c.svg",
+    "static/media/discuss-selected.svg": "/duolingo_copy/static/media/discuss-selected.6b9017b5.svg",
+    "static/media/discuss.svg": "/duolingo_copy/static/media/discuss.806b1367.svg",
+    "static/media/duo-traveler.svg": "/duolingo_copy/static/media/duo-traveler.9acefd83.svg",
+    "static/media/fire.svg": "/duolingo_copy/static/media/fire.54204a9c.svg",
+    "static/media/flags.svg": "/duolingo_copy/static/media/flags.52dbf394.svg",
+    "static/media/gem.svg": "/duolingo_copy/static/media/gem.83a2d147.svg",
+    "static/media/learn-selected.svg": "/duolingo_copy/static/media/learn-selected.df4eddac.svg",
+    "static/media/learn.svg": "/duolingo_copy/static/media/learn.b3e4bff7.svg",
+    "static/media/profile-selected.svg": "/duolingo_copy/static/media/profile-selected.67f03a5e.svg",
+    "static/media/profile.svg": "/duolingo_copy/static/media/profile.4a4dab47.svg",
+    "static/media/sad.svg": "/duolingo_copy/static/media/sad.3bdf2f30.svg",
+    "static/media/store-selected.svg": "/duolingo_copy/static/media/store-selected.0ee420c2.svg",
+    "static/media/store.svg": "/duolingo_copy/static/media/store.bdbab8a7.svg",
+    "static/media/stories-selected.svg": "/duolingo_copy/static/media/stories-selected.47d85c5b.svg",
+    "static/media/stories.svg": "/duolingo_copy/static/media/stories.034d6aef.svg",
+    "static/media/train.svg": "/duolingo_copy/static/media/train.dcca49d7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d9b5b4e.js",
+    "static/js/2.ecc8880a.chunk.js",
+    "static/css/main.aecc4508.chunk.css",
+    "static/js/main.5b2e7dd1.chunk.js"
+  ]
+}
